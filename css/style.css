@@ -19,7 +19,7 @@
 }
  /* 2. Header dan menu */
  header {
-    background-color: hsl(0, 0%, 2%);
+    background: linear-gradient(to right, #000a15, #0f3c6e);
     color: #3089f6;
     text-align: center;
     padding: 33px 17px;
@@ -61,7 +61,7 @@
  /* 3. Isi halaman */
  main { max-width: 960px; margin: 0 auto; padding: 16px }
  section {
-    background-color: hsl(0, 0%, 4%);
+    background: linear-gradient(to right, #000a15, #0f3c6e);
     border: 3px solid #3089f6;
     border-radius: 12px;
     padding: 24px;
@@ -243,7 +243,7 @@ button :hover { background-color: hsl(0, 0%, 3%); }
 }
 /* 7. Footer */
 footer {
-    background-color: hsl(0, 0%, 4%);
+    background: linear-gradient(to right, #000a15, #0f3c6e);
     color: #f3e3d3;
     text-align: center;
     padding: 17px;

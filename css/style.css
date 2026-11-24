@@ -1,0 +1,288 @@
+ /*1. Pengaturan Umum*/
+ * {
+   box-sizing:border-box;
+   margin:0;
+   padding:0; 
+   scroll-behavior: smooth;
+}
+ body {
+    margin: 0;
+    font-family: "Poppins",Arial,sans-serif;
+    color: #fefefe;
+    line-height: 1.6;
+    background-color: whitesmoke;
+    animation: fadeInBody 1s ease-in;
+ }
+ @keyframes fadeInBody {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+ /* 2. Header dan menu */
+ header {
+    background-color: hsl(0, 0%, 2%);
+    color: #3089f6;
+    text-align: center;
+    padding: 33px 17px;
+    margin-bottom: 17px;
+    border-bottom: 3px solid #3089f6;
+    animation: slideDownHeader 0.7s ease-out;
+ }
+ @keyframes slideDownHeader {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+ header h1 { margin: 0; font-size: 40px; }
+ nav { 
+   margin-top: 16px; 
+   display: flex;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 12px;
+}
+ nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 12px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+ }
+ nav a:hover { 
+   background-color: #3089f6;
+   color: white;
+   border-color: #3089f6;
+   transform: translateY(-2px) scale(1.05);
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   text-decoration: underline; }
+
+ /* 3. Isi halaman */
+ main { max-width: 960px; margin: 0 auto; padding: 16px }
+ section {
+    background-color: hsl(0, 0%, 4%);
+    border: 3px solid #3089f6;
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeUpSection 1s ease-out both;
+ }
+ @keyframes fadeUpSection {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0);  }
+}
+ h2 {
+    color: #3089f6;
+    border-bottom: 3px solid #3089f6;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    margin-top: 0;
+ }
+ h3 {
+    color: #3089f6;
+    margin-top: 24px;
+    margin-bottom: 16px;
+ }
+ .produk model {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 16px;
+ }
+ .produk-model {
+    position: relative;
+    background-color: hsl(0, 0%, 4%);
+    border: 3px solid #3089f6;
+    border-radius: 12px;
+    padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+ }
+ .produk-model:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    border-color: #f9810a;
+    background-color: hsl(0, 0%, 6%);}
+
+.produk-model .badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background-color: #f9810a;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      z-index: 1;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      animation: pulseBadge 1.5s infinite;
+}
+@keyframes pulseBadge {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+}
+.produk-model img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.kartu-produk:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+img { max-width: 100%; height: auto; border-radius: 8px; position: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.produk-model td {
+      font-size: 1.1rem;
+      color: #f3e3d3;
+      margin-top: 8px;
+      transition: color 0.3s ease;
+      text-decoration: underline;
+}
+.produk-model:hover td {
+      color: #f9810a;
+      border-color: #f9810a;
+      transform: translateY(-2px) scale(1.05);
+}
+ /* 4. Tabel */
+ table {
+    width: 100%; border-collapse: collapse; 
+    border-collapse: collapse;
+    margin: 16px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #3089f6;
+   }
+thead { background-color: #3089f6; color: white; }
+th, td { 
+   border: 1px solid #eadfd3; 
+   padding: 10px; 
+   text-align: left; 
+   border-bottom: 1px solid #eadfd3;
+   transition: background-color 0.3s ease;
+   margin: 0;
+   gap: 0;
+}
+tbody tr:hover { background-color: #f9810a;
+   transform: scale(1.02);
+}
+
+/*5. From */
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+button {
+    background-color: #f9810a;
+    color: rgb(250, 249, 249);
+    border: none;
+    border-radius: 6px;
+    padding: 12px 24px;
+    cursor: pointer;
+}
+button :hover { background-color: hsl(0, 0%, 3%); }
+
+/* 6. Tombol WhatsApp */
+.tombol-wa {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: shining 3s infinite;
+}
+@keyframes shining {
+    0%, 100% {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 0 0 rgba(37, 211, 102, 0);
+    }
+    50% {
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 0 18px 6px rgba(37, 211, 102, 0.7);
+    }
+}
+.tombol-wa:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+.kontak p{
+    margin-bottom: 12px 0;
+    font-size: 1.1rem;
+    color: #f3e3d3;
+    padding: 8px 0;
+    line-height: 1.6; 
+}
+/* 7. Footer */
+footer {
+    background-color: hsl(0, 0%, 4%);
+    color: #f3e3d3;
+    text-align: center;
+    padding: 17px;
+    border-top: 3px solid #3089f6;
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  .tentang-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  section {
+    padding: 22px;
+  }
+
+  th, td {
+    padding: 10px 12px;
+    font-size: 0.88rem;
+    margin-bottom: 8px;
+  }
+}
+p {
+  margin-top: 16px;
+   margin-bottom: 16px; 
+}
+
+.tombol-atas {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3089f6;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    transition: all 0.3s cubic-bezier(0.4, 0.8, 0.2, 1);
+}
+
+.tombol-atas:hover {
+    background-color: #1a5bb8;
+    transform: scale(1.2) rotate(360deg);
+
+}
